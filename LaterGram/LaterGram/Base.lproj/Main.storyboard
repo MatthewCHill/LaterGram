@@ -8,17 +8,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Testing View Controller-->
         <scene sceneID="J1w-Yd-frH">
             <objects>
-                <viewController id="8Ge-Xy-bQb" sceneMemberID="viewController">
+                <viewController id="8Ge-Xy-bQb" customClass="TestingViewController" customModule="LaterGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9i4-Cs-jap">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Post Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ifj-UI-3dO">
+                                <rect key="frame" x="0.0" y="123" width="393" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="41Z-bb-7WQ">
+                                <rect key="frame" x="0.0" y="157" width="393" height="153"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vb5-5t-q9d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vb5-5t-q9d" firstAttribute="trailing" secondItem="41Z-bb-7WQ" secondAttribute="trailing" id="1IK-Zh-I4l"/>
+                            <constraint firstItem="Vb5-5t-q9d" firstAttribute="bottom" secondItem="41Z-bb-7WQ" secondAttribute="bottom" constant="508" id="Iil-Ix-1Th"/>
+                            <constraint firstItem="Vb5-5t-q9d" firstAttribute="trailing" secondItem="ifj-UI-3dO" secondAttribute="trailing" id="PMh-t2-Syl"/>
+                            <constraint firstItem="41Z-bb-7WQ" firstAttribute="top" secondItem="ifj-UI-3dO" secondAttribute="bottom" id="YbN-mQ-UGb"/>
+                            <constraint firstItem="ifj-UI-3dO" firstAttribute="top" secondItem="Vb5-5t-q9d" secondAttribute="top" constant="20" id="hFR-6e-OeM"/>
+                            <constraint firstItem="41Z-bb-7WQ" firstAttribute="leading" secondItem="Vb5-5t-q9d" secondAttribute="leading" id="jUD-sD-Te2"/>
+                            <constraint firstItem="ifj-UI-3dO" firstAttribute="leading" secondItem="Vb5-5t-q9d" secondAttribute="leading" id="z3Z-SE-BQU"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lCZ-Ho-PpT"/>
+                    <navigationItem key="navigationItem" id="lCZ-Ho-PpT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="gKl-o5-XJK">
+                            <connections>
+                                <action selector="createButtonTapped:" destination="8Ge-Xy-bQb" id="crc-bE-eba"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createButtonTapped" destination="gKl-o5-XJK" id="AOY-3k-ErW"/>
+                        <outlet property="postBodyTextView" destination="41Z-bb-7WQ" id="mMY-Gn-EH8"/>
+                        <outlet property="postTitleTextField" destination="ifj-UI-3dO" id="A2e-fl-hMY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tDy-Vq-B1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +78,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

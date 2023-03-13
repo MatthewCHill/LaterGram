@@ -16,7 +16,7 @@ class Post {
     let postImage: UIImage?
     let uuid: String
     
-    var DictaryRepresentation: [String: AnyHashable] {
+    var dictaryRepresentation: [String: AnyHashable] {
         ["title": self.postTitle,
          "post": self.postBody,
          "date": self.postDate,
