@@ -20,6 +20,11 @@
 		34084D5D29BFD31400E62E92 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084D5C29BFD31400E62E92 /* TestingViewController.swift */; };
 		34084D6029BFDAAF00E62E92 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084D5F29BFDAAF00E62E92 /* DateHelper.swift */; };
 		34084D6229BFDB6B00E62E92 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084D6129BFDB6B00E62E92 /* FirebaseService.swift */; };
+		34CA659629C10BBD0069E0C3 /* GramPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659529C10BBD0069E0C3 /* GramPostViewController.swift */; };
+		34CA659829C10CB40069E0C3 /* GramPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659729C10CB40069E0C3 /* GramPostViewModel.swift */; };
+		34CA659B29C121AC0069E0C3 /* GramFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659A29C121AC0069E0C3 /* GramFeedCollectionViewController.swift */; };
+		34CA659D29C121BE0069E0C3 /* GramFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659C29C121BE0069E0C3 /* GramFeedViewModel.swift */; };
+		34CA659F29C124C00069E0C3 /* GramFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659E29C124C00069E0C3 /* GramFeedCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		34084D5C29BFD31400E62E92 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		34084D5F29BFDAAF00E62E92 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		34084D6129BFDB6B00E62E92 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		34CA659529C10BBD0069E0C3 /* GramPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostViewController.swift; sourceTree = "<group>"; };
+		34CA659729C10CB40069E0C3 /* GramPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostViewModel.swift; sourceTree = "<group>"; };
+		34CA659A29C121AC0069E0C3 /* GramFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramFeedCollectionViewController.swift; sourceTree = "<group>"; };
+		34CA659C29C121BE0069E0C3 /* GramFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramFeedViewModel.swift; sourceTree = "<group>"; };
+		34CA659E29C124C00069E0C3 /* GramFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +81,11 @@
 		34084D3929BFC29500E62E92 /* LaterGram */ = {
 			isa = PBXGroup;
 			children = (
+				34084D6A29C0FDEB00E62E92 /* UI */,
+				34084D4029BFC29500E62E92 /* Main.storyboard */,
 				34084D5E29BFDA9300E62E92 /* HelperFiles */,
 				34084D5729BFCBD600E62E92 /* Model */,
 				34084D4E29BFC2A700E62E92 /* SupportingFiles */,
-				34084D4029BFC29500E62E92 /* Main.storyboard */,
 				34084D4F29BFC45E00E62E92 /* GoogleService-Info.plist */,
 				34084D4529BFC29700E62E92 /* LaunchScreen.storyboard */,
 				34084D5C29BFD31400E62E92 /* TestingViewController.swift */,
@@ -110,6 +121,42 @@
 				34084D6129BFDB6B00E62E92 /* FirebaseService.swift */,
 			);
 			path = HelperFiles;
+			sourceTree = "<group>";
+		};
+		34084D6A29C0FDEB00E62E92 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				34CA659929C1212C0069E0C3 /* FeedView */,
+				34084D7329C1064300E62E92 /* PostView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		34084D7329C1064300E62E92 /* PostView */ = {
+			isa = PBXGroup;
+			children = (
+				34CA659529C10BBD0069E0C3 /* GramPostViewController.swift */,
+				34CA659729C10CB40069E0C3 /* GramPostViewModel.swift */,
+			);
+			path = PostView;
+			sourceTree = "<group>";
+		};
+		34CA659929C1212C0069E0C3 /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				34CA659A29C121AC0069E0C3 /* GramFeedCollectionViewController.swift */,
+				34CA659C29C121BE0069E0C3 /* GramFeedViewModel.swift */,
+				34CA65A029C124CA0069E0C3 /* CustomeCell */,
+			);
+			path = FeedView;
+			sourceTree = "<group>";
+		};
+		34CA65A029C124CA0069E0C3 /* CustomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				34CA659E29C124C00069E0C3 /* GramFeedCollectionViewCell.swift */,
+			);
+			path = CustomeCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,10 +241,15 @@
 				34084D3B29BFC29500E62E92 /* AppDelegate.swift in Sources */,
 				34084D3D29BFC29500E62E92 /* SceneDelegate.swift in Sources */,
 				34084D5929BFCBEB00E62E92 /* User.swift in Sources */,
+				34CA659829C10CB40069E0C3 /* GramPostViewModel.swift in Sources */,
 				34084D6029BFDAAF00E62E92 /* DateHelper.swift in Sources */,
 				34084D6229BFDB6B00E62E92 /* FirebaseService.swift in Sources */,
+				34CA659F29C124C00069E0C3 /* GramFeedCollectionViewCell.swift in Sources */,
 				34084D5B29BFCD9A00E62E92 /* Post.swift in Sources */,
+				34CA659D29C121BE0069E0C3 /* GramFeedViewModel.swift in Sources */,
+				34CA659B29C121AC0069E0C3 /* GramFeedCollectionViewController.swift in Sources */,
 				34084D5D29BFD31400E62E92 /* TestingViewController.swift in Sources */,
+				34CA659629C10BBD0069E0C3 /* GramPostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
