@@ -22,7 +22,7 @@ class Post {
     let postTitle: String
     let postBody: String
     let postDate: Date
-    let postImage: UIImage?
+    let postImage: String?
     let uuid: String
     
     var dictaryRepresentation: [String: AnyHashable] {
@@ -34,7 +34,7 @@ class Post {
         ]
     }
     
-    init(postTitle: String, postBody: String, postDate: Date = Date(), postImage: UIImage? = nil, uuid: String = UUID().uuidString) {
+    init(postTitle: String, postBody: String, postDate: Date = Date(), postImage: String?, uuid: String = UUID().uuidString) {
         self.postTitle = postTitle
         self.postBody = postBody
         self.postDate = postDate
@@ -51,7 +51,7 @@ extension Post {
         let body = dictionary[Key.postBody] as? String,
         let date = dictionary[Key.postDate] as? Double,
         let uuid = dictionary[Key.uuid] as? String else { return nil }
-        let image = dictionary[Key.postImage] as? UIImage
+        let image = dictionary[Key.postImage] as? String
         
         self.init(postTitle: title, postBody: body, postDate: Date(timeIntervalSince1970: date), postImage: image, uuid: uuid)
     }

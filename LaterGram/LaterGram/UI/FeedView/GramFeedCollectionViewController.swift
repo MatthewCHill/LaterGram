@@ -19,7 +19,6 @@ class GramFeedCollectionViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-       // self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         viewModel = GramFeedViewModel(delegate: self)
 
         // Do any additional setup after loading the view.
@@ -59,7 +58,7 @@ class GramFeedCollectionViewController: UICollectionViewController {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? GramFeedCollectionViewCell else {return UICollectionViewCell()}
     
         
-        let post = viewModel.posts[indexPath.row]
+        let post = viewModel.posts[indexPath.item]
         
         cell.configureCell(with: post)
     
