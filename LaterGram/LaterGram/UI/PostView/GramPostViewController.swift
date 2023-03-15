@@ -19,20 +19,48 @@ class GramPostViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = GramPostViewModel()
-        postImageView.image = UIImage(named: "wife")
+        viewModel = GramPostViewModel(delegate: self)
+        updateUI()
+        setUpImageView()
     }
     
     // MARK: - Properties
+    
+    // MARK: - Helper Functions
+    
+    private func updateUI() {
+        guard let post = viewModel.post else { return }
+        postTitleTextField.text = post.postTitle
+        postBodyTextView.text = post.postBody
+        
+        viewModel.getImage { image in
+            self.postImageView.image = image
+        }
+    }
+    
+    func setUpImageView() {
+        postImageView.contentMode = .scaleAspectFit
+        postImageView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
+        postImageView.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func imageViewTapped() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        present(picker, animated: true)
+    }
+
     
     // MARK: - Actions
     
     @IBAction func postButtonTapped(_ sender: Any) {
         guard let title = postTitleTextField.text,
-              let body = postBodyTextView.text else {return}
-        viewModel.createPost(title: title, body: body)
-        guard let tabBarController = self.tabBarController else {return}
-        tabBarController.selectedIndex = 1
+              let body = postBodyTextView.text,
+              let image = postImageView.image else {return}
+        viewModel.createPost(title: title, body: body, image: image)
     }
     
 
@@ -46,4 +74,21 @@ class GramPostViewController: UIViewController {
     }
     */
 
+}
+
+// MARK: - Extensions
+
+extension GramPostViewController: GramPostViewModelDelegate {
+    func imageSuccessfullySaved() {
+        guard let tabBarController = self.tabBarController else {return}
+        tabBarController.selectedIndex = 1
+    }
+}
+
+extension GramPostViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        guard let image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage else { return }
+        postImageView.image = image
+    }
 }

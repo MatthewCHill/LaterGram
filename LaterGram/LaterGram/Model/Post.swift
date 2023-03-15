@@ -19,10 +19,10 @@ class Post {
         static let collectionType = "post"
     }
     
-    let postTitle: String
-    let postBody: String
+    var postTitle: String
+    var postBody: String
     let postDate: Date
-    let postImage: String?
+    var postImage: String?
     let uuid: String
     
     var dictaryRepresentation: [String: AnyHashable] {
