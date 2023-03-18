@@ -13,7 +13,7 @@ class GramFeedCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var postTitleLabel: UILabel!
     @IBOutlet weak var postDateLabel: UILabel!
     @IBOutlet weak var postBodyTextView: UITextView!
-    @IBOutlet weak var postImageView: UIImageView!
+    @IBOutlet weak var postImageView: ServiceRequestingImageView!
     
     // MARK: - Functions
     
@@ -21,6 +21,10 @@ class GramFeedCollectionViewCell: UICollectionViewCell {
         postTitleLabel.text = post.postTitle
         postDateLabel.text = post.postDate.stringValue()
         postBodyTextView.text = post.postBody
-        postImageView.image = UIImage(named: "wife")
+        fetchImage(with: post)
+    }
+    
+    func fetchImage(with post: Post) {
+        postImageView.fetchImage(post: post)
     }
 }

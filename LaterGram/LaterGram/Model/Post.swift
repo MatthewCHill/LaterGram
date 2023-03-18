@@ -61,6 +61,4 @@ extension Post: Equatable {
     static func == (lhs: Post, rhs: Post) -> Bool {
         return lhs.uuid == rhs.uuid
     }
-    
-    
 }

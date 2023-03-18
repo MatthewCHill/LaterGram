@@ -21,6 +21,7 @@
 		34084D6029BFDAAF00E62E92 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084D5F29BFDAAF00E62E92 /* DateHelper.swift */; };
 		34084D6229BFDB6B00E62E92 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34084D6129BFDB6B00E62E92 /* FirebaseService.swift */; };
 		34597CB429C260C400546DB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34597CB329C260C400546DB7 /* Constants.swift */; };
+		34AFA41D29C3B037004BE399 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AFA41C29C3B037004BE399 /* ServiceRequestingImageView.swift */; };
 		34CA659629C10BBD0069E0C3 /* GramPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659529C10BBD0069E0C3 /* GramPostViewController.swift */; };
 		34CA659829C10CB40069E0C3 /* GramPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659729C10CB40069E0C3 /* GramPostViewModel.swift */; };
 		34CA659B29C121AC0069E0C3 /* GramFeedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34CA659A29C121AC0069E0C3 /* GramFeedCollectionViewController.swift */; };
@@ -44,6 +45,7 @@
 		34084D5F29BFDAAF00E62E92 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		34084D6129BFDB6B00E62E92 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		34597CB329C260C400546DB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		34AFA41C29C3B037004BE399 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 		34CA659529C10BBD0069E0C3 /* GramPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostViewController.swift; sourceTree = "<group>"; };
 		34CA659729C10CB40069E0C3 /* GramPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramPostViewModel.swift; sourceTree = "<group>"; };
 		34CA659A29C121AC0069E0C3 /* GramFeedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramFeedCollectionViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				34CA659E29C124C00069E0C3 /* GramFeedCollectionViewCell.swift */,
+				34AFA41C29C3B037004BE399 /* ServiceRequestingImageView.swift */,
 			);
 			path = CustomeCell;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				34CA659829C10CB40069E0C3 /* GramPostViewModel.swift in Sources */,
 				34084D6029BFDAAF00E62E92 /* DateHelper.swift in Sources */,
 				34084D6229BFDB6B00E62E92 /* FirebaseService.swift in Sources */,
+				34AFA41D29C3B037004BE399 /* ServiceRequestingImageView.swift in Sources */,
 				34CA659F29C124C00069E0C3 /* GramFeedCollectionViewCell.swift in Sources */,
 				34597CB429C260C400546DB7 /* Constants.swift in Sources */,
 				34084D5B29BFCD9A00E62E92 /* Post.swift in Sources */,
